@@ -30,13 +30,29 @@
 
     <div class="row">
       <div class="col-xs-12">
-        <img src="imagens/cam.gif" style="width: 100%;" alt="">
+        <img id="myImage" src="imagens/cam.gif" style="width: 100%;" alt="">
       </div>
     </div>
 
     <div class="row">
-      <div class="col-xs-12">
-        <button type="reset" class="btn btn-block btn-danger" id="limpar" style="font-weight: bold; margin-top: 5%;">Limpar</button>
+      <div class="col-xs-12" id="lat">
+        <h1>Latitude</h1>
+        <input type="" class="form-control" readonly>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12" id="long">
+        <h1>Longitude</h1>
+        <input type="" class="form-control" readonly>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12" id="mstMapa" class="hidden">
+        <center>
+          <div id="map"></div>
+        </center>
       </div>
     </div>
   </div>
