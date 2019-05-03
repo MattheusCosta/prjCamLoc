@@ -11,8 +11,12 @@ $(document).on('click', '#camera', function(){
   function onSuccess(imageURI) {
     var image = document.getElementById('myImage');
     image.src = imageURI;
-    
-      function mapa(position){
+
+    function mapa(position){
+
+          $('input[id=latitude]').val(position.coords.latitude);
+          $('input[id=longitude]').val(position.coords.longitude);
+
           L.mapquest.key = 'lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24';
 
           var map = L.mapquest.map('map', {
@@ -26,11 +30,13 @@ $(document).on('click', '#camera', function(){
               draggable: false
             }).bindPopup('Denver, CO').addTo(map);
 
-            L.circle([position.coords.latitude, position.coords.longitude], { radius: 200 }).addTo(map);
+            L.circle([position.coords.latitude, position.coords.longitude], { radius: 100 }).addTo(map);
 
           map.addControl(L.mapquest.control());
         };
         navigator.geolocation.getCurrentPosition(mapa);
+
+
   }
 
   function onFail(message) {
@@ -42,6 +48,3 @@ $(document).on('click', '#limpar', function(){
   var image = document.getElementById('myImage');
   image.src = ('imagens/cam.gif');
 });
-
-
-

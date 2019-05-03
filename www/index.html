@@ -6,6 +6,8 @@
   <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
   <script src="components/loader.js"></script>
   <script src="lib/onsenui/js/onsenui.min.js"></script>
+  <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
 
   <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
 
@@ -37,14 +39,14 @@
     <div class="row">
       <div class="col-xs-12" id="lat">
         <h1>Latitude</h1>
-        <input type="" class="form-control" readonly>
+        <input type="" class="form-control" readonly id="latitude">
       </div>
     </div>
 
     <div class="row">
       <div class="col-xs-12" id="long">
         <h1>Longitude</h1>
-        <input type="" class="form-control" readonly>
+        <input type="" class="form-control" readonly id="longitude">
       </div>
     </div>
 
