@@ -12,6 +12,8 @@ $(document).on('click', '#camera', function(){
     var image = document.getElementById('myImage');
     image.src = imageURI;
 
+    $('#map').css({opacity:"1", height: "300px"});
+
     function mapa(position){
 
           $('input[id=latitude]').val(position.coords.latitude);
@@ -47,4 +49,7 @@ $(document).on('click', '#camera', function(){
 $(document).on('click', '#limpar', function(){
   var image = document.getElementById('myImage');
   image.src = ('imagens/cam.gif');
+  $('input[id=latitude]').val("");
+  $('input[id=longitude]').val("");
+  $('#map').css({opacity:"0", height: "0px"});
 });
